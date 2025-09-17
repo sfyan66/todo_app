@@ -5,6 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
   
   <title>Frontend Mentor | Todo app</title>
 
@@ -15,22 +19,68 @@
   </style>
 </head>
 <body>
-
-  Todo
-
-  <!-- Add dynamic number --> items left
-
-  All
-  Active 
-  Completed
-
-  Clear Completed
-
-  Drag and drop to reorder list
-
+  <header class="hdark">
+    <div class="container">
+      <h1>TODO</h1>
+      <button class="dark"></button>
+    </div>
+  </header>
+  <footer class="fdark">
+    <div class="container">
+      <div class="box" id="box1">
+        <button></button>
+        <input type="text" placeholder="Create a new todo">
+      </div>
+      <div class="boxs">
+        
+      </div>
+      <div class="box" id="lbox">
+        <li class="counter">0</li>
+        <li>items left</li>
+        <li>All</li>
+        <li>Active</li>
+        <li>Completed</li>
+        <li>Clear Completed</li>
+      </div>
+      <div class="drop">
+        <p>Drag and drop to reorder list</p>
+      </div>
+    </div>
+  </footer>
+    <!-- <footer class="fdark">
+    <div class="container">
+      <div class="add">
+          <div class="box" id="box1">
+            <button></button>
+            <input type="text" placeholder="Create a new TO Do">
+          </div>
+          <div class="boxes">
+            <div class="box">
+              <button class="check"></button>
+              <p>plaing wijkqn qipejhcqk poq</p>
+            </div>
+          </div>
+          
+          <div class="footer">
+            <ul>
+              <li>items left</li>
+              <li>All</li>
+              <li>Active</li>
+              <li>Completed</li>
+              <li>Clear Completed</li>
+            </ul>
+        </div>
+      </div>
+      <div class="drop">
+        <p>Drag and drop to reorder list</p>
+      </div>
+    </div>
+  </footer> -->
+  <script src="/main.js"></script>
+<!-- 
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
-  </div>
+  </div> -->
 </body>
 </html>

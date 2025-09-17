@@ -1,0 +1,143 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Josefin sans", sans-serif;
+}
+body {
+    max-width: 1440px;  
+}
+.container {
+    max-width: 540px;
+    margin: auto;
+}
+header {
+    height: 300px;
+}
+header h1 {
+    color: white;
+    font-size: 45px;
+    letter-spacing: 15px;
+
+}
+header .container {
+    display: flex;
+    justify-content: space-between;
+    padding: 80px 0 0 0;
+} 
+.hdark {
+    background-image: url(../images/bg-desktop-dark.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.hlight {
+    background-image: url(../images/bg-desktop-light.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+header button {
+    all: unset;
+    cursor: pointer;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+}
+header .dark {
+    background-image: url(../images/icon-sun.svg);
+}
+header .light {
+    background-image: url(../images/icon-moon.svg);
+}
+/*################################################################*/
+footer {
+    position: relative;
+    min-height: 200px;
+}
+footer .container {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -65px;
+    max-width: 540px;
+    width: 95%;
+}
+footer .box {
+    display: flex;
+    height: 65px;
+    border-bottom: .4px solid hsl(235, 16%, 43%);
+    font-size: 18px;
+    align-items: center;
+    gap: 20px;
+    padding: 0 20px;
+    color: hsl(236, 9%, 61%);
+}
+footer input {
+    all: unset;
+}
+footer #lbox {
+    list-style: none;
+    justify-content: space-between;
+    gap: 15px;
+    font-size: 14px;
+    color: hsl(235, 16%, 43%);
+}
+footer #lbox :nth-child(2) {
+    margin-left: -10px;
+    flex: 3;
+    font-size: 12;
+}
+footer #lbox :nth-child(5) {
+    flex: 2.5;
+}
+footer #lbox :nth-child(3) {
+    color: hsl(220, 98%, 61%);
+}
+footer #lbox li {
+    cursor: pointer;
+}
+footer button {
+    all: unset;
+    width: 20px;
+    height: 20px;
+    border: 1px solid hsl(235, 16%, 43%);
+    border-radius: 50%;
+    cursor: pointer;
+}
+footer .boxs .box button:hover {
+    border: 1px solid transparent;
+    background: linear-gradient(hsl(235, 24%, 19%), hsl(235, 24%, 19%)) padding-box, linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%)) border-box;
+}
+footer .button {
+    background: url(/images/icon-check.svg) no-repeat center, linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%)) padding-box;
+}
+footer .boxs .box:hover i {
+    content: url(/images/icon-cross.svg);
+    margin-left: auto;
+    width: 15px;
+    height: 15px;
+}
+footer .drop {
+    margin: 40px auto;
+    text-align: center;
+    color: hsl(235, 16%, 43%);
+    font-size: 14px;
+}
+.fdark {
+    background-color: hsl(235, 21%, 11%);
+}
+.fdark input::placeholder {
+    color: hsl(235, 16%, 43%);
+}
+.fdark .box {
+    color: hsl(234, 39%, 85%);
+    background-color: hsl(235, 24%, 19%);
+}
+.fdark .box p:hover {
+    color: hsl(236, 33%, 92%);
+} 
+.flight {
+
+}
