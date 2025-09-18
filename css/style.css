@@ -2,9 +2,13 @@
     padding: 0;
     margin: 0;
     font-family: "Josefin sans", sans-serif;
+    font-weight: 500;
 }
 body {
-    max-width: 1440px;  
+    max-width: 1440px;
+    margin: auto;
+    background-color: black;
+    margin-top: 50px;
 }
 .container {
     max-width: 540px;
@@ -17,6 +21,7 @@ header h1 {
     color: white;
     font-size: 45px;
     letter-spacing: 15px;
+    font-weight: 700;
 
 }
 header .container {
@@ -56,6 +61,12 @@ footer {
     position: relative;
     min-height: 200px;
 }
+footer #box1 {
+    margin-top: -40px;
+}
+footer .boxs {
+    margin-top: 20px;
+}
 footer .container {
     position: absolute;
     left: 50%;
@@ -73,29 +84,30 @@ footer .box {
     gap: 20px;
     padding: 0 20px;
     color: hsl(236, 9%, 61%);
+    border-radius: 6px;
+}
+footer .box p {
+    cursor: pointer;
 }
 footer input {
     all: unset;
 }
-footer #lbox {
+footer .lbox {
     list-style: none;
     justify-content: space-between;
     gap: 15px;
     font-size: 14px;
     color: hsl(235, 16%, 43%);
 }
-footer #lbox :nth-child(2) {
+footer .lbox :nth-child(2) {
     margin-left: -10px;
     flex: 3;
     font-size: 12;
 }
-footer #lbox :nth-child(5) {
+footer .lbox :nth-child(5) {
     flex: 2.5;
 }
-footer #lbox :nth-child(3) {
-    color: hsl(220, 98%, 61%);
-}
-footer #lbox li {
+footer .lbox li {
     cursor: pointer;
 }
 footer button {
@@ -106,7 +118,7 @@ footer button {
     border-radius: 50%;
     cursor: pointer;
 }
-footer .boxs .box button:hover {
+.fdark .boxs .activ button:hover {
     border: 1px solid transparent;
     background: linear-gradient(hsl(235, 24%, 19%), hsl(235, 24%, 19%)) padding-box, linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%)) border-box;
 }
@@ -135,9 +147,35 @@ footer .drop {
     color: hsl(234, 39%, 85%);
     background-color: hsl(235, 24%, 19%);
 }
-.fdark .box p:hover {
+.fdark .activ p:hover {
     color: hsl(236, 33%, 92%);
+    margin-top: -5px;
 } 
-.flight {
-
+.fdark .lbox li:hover {
+    color: hsl(236, 33%, 92%);
 }
+/*///////////////////////////////////////////////*/
+.flight {
+    background-color: hsl(0, 0%, 98%);
+}
+.flight input::placeholder {
+    color: hsl(236, 9%, 61%);
+}
+.flight .box {
+    color: hsl(235, 19%, 35%);
+    background-color: hsl(0, 0%, 98%);
+}
+.flight .activ p:hover {
+    color: hsl(235, 24%, 19%);
+    margin-top: -5px;
+} 
+.flight .boxs .activ button:hover {
+    border: 1px solid transparent;
+    background: linear-gradient(hsl(0, 0%, 98%), hsl(0, 0%, 98%)) padding-box, linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%)) border-box;
+}
+.flight .lbox li:hover {
+    color: hsl(235, 24%, 19%);
+}
+/* @media(max-width: 375px) {
+    .lbox
+} */
