@@ -7,6 +7,14 @@ let heit = [];
 let pxx = 65.5;
 let ext = 200;
 let sum = (heit * pxx) + ext;
+let tasks = ["1", "1"]
+async function savetasks() {
+    await fetch("http://localhost:5000/tasks", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(tasks)
+    });
+};
 inpt.addEventListener("keydown", (e) => {
     if (e.key === "Enter") {
         addbtn.click();
@@ -20,15 +28,15 @@ addbtn.addEventListener("click", () => {
         box.classList.add("activ");
         let button = document.createElement("button");
         button.classList.add("active")
-        let p = document.createElement("p");
+        let title = document.createElement("p");
         let ii = document.createElement("i");
         ii.classList.add("remove");
         ii.style.cursor = "pointer"
         box.appendChild(button);
-        box.appendChild(p);
+        box.appendChild(title);
         box.appendChild(ii);
         boxs.appendChild(box);
-        p.textContent = inpt.value;
+        title.textContent = inpt.value;
         inpt.value = "";
         inpt.focus();
         number.push("1");
@@ -36,19 +44,28 @@ addbtn.addEventListener("click", () => {
         let sum = (heit.length * pxx) + ext;
         footer.style.height = sum + "px";
         counter.textContent = number.length;
-        p.addEventListener("click", () => {
+        title.addEventListener("click", () => {
             button.click();
         }); 
+        let state = "active";
         button.addEventListener("click", () => {
             button.className = "button";
-            p.style.textDecoration = "line-through";
-            p.style.color = "hsl(236, 9%, 61%)";
+            title.style.textDecoration = "line-through";
+            title.style.color = "hsl(236, 9%, 61%)";
             number.pop();
             counter.textContent = number.length;
             box.classList.remove("activ");
             box.classList.add("finished");
+            state = "finished";
         });
-    }
+        let task = {
+            id: Date.now(),
+            title,
+            state,
+            createdAt: new Date().toISOString().slice(0,16)
+        };
+        tasks.push(task);
+    };
 });
 document.addEventListener("click", (e) => {
     if(e.target.className == "remove") {
@@ -129,3 +146,6 @@ clear.addEventListener("click", () => {
         el.remove();
     });
 });
+document.querySelector(".clear").addEventListener("click", () => {
+    savetasks();
+})
