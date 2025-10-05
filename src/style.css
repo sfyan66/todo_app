@@ -7,7 +7,7 @@
 body {
     max-width: 1440px;
     margin: auto;
-    background-color: black;
+    /* background-color: black; */
     margin-top: 50px;
 }
 .container {
@@ -92,19 +92,21 @@ footer .box p {
 footer input {
     all: unset;
 }
-footer .lbox {
+footer .lbox ul {
     list-style: none;
     justify-content: space-between;
     gap: 15px;
     font-size: 14px;
     color: hsl(235, 16%, 43%);
+    display: flex;
+    width: 100%;
 }
-footer .lbox :nth-child(2) {
+footer .lbox .item {
     margin-left: -10px;
     flex: 3;
-    font-size: 12;
+    font-size: 12px;
 }
-footer .lbox :nth-child(5) {
+footer .lbox ul :nth-child(5) {
     flex: 2.5;
 }
 footer .lbox li {
@@ -118,13 +120,19 @@ footer button {
     border-radius: 50%;
     cursor: pointer;
 }
-.fdark .boxs .activ button:hover {
+.fdark .boxs .active button:hover  {
     border: 1px solid transparent;
     background: linear-gradient(hsl(235, 24%, 19%), hsl(235, 24%, 19%)) padding-box, linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%)) border-box;
 }
-footer .button {
+footer .finished button {
     background: url(/images/icon-check.svg) no-repeat center, linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%)) padding-box;
 }
+footer .finished p {
+    text-decoration: line-through;
+    color: hsl(236, 9%, 61%);
+}
+
+
 footer .boxs .box:hover i {
     content: url(/images/icon-cross.svg);
     margin-left: auto;
@@ -151,9 +159,10 @@ footer .drop {
     color: hsl(236, 33%, 92%);
     margin-top: -5px;
 } 
-.fdark .lbox li:hover {
+.fdark .lbox ul li:hover {
     color: hsl(236, 33%, 92%);
 }
+
 /*///////////////////////////////////////////////*/
 .flight {
     background-color: hsl(0, 0%, 98%);
@@ -173,9 +182,16 @@ footer .drop {
     border: 1px solid transparent;
     background: linear-gradient(hsl(0, 0%, 98%), hsl(0, 0%, 98%)) padding-box, linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%)) border-box;
 }
-.flight .lbox li:hover {
+.flight .lbox ul li:hover {
     color: hsl(235, 24%, 19%);
 }
-/* @media(max-width: 375px) {
-    .lbox
-} */
+.drop .save {
+    width: 60px;
+    border: 1px solid hsl(235, 21%, 11%);
+    background-color: hsl(235, 21%, 11%);
+    border-radius: 6px;
+    margin: auto;
+    padding: 10px;
+    cursor: pointer;
+    color: white;
+}
